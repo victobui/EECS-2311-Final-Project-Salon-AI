@@ -22,7 +22,7 @@
   },
   "include": [
     "src",
-    "./.eslintrc.cjs"
+    "./Frontend/.eslintrc.cjs"
   ],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
