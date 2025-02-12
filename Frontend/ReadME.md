@@ -29,41 +29,50 @@ npm config set save-exact true
 ```
 This means that you can simply stick with the `npm install...` for future, thus removing the `--save --save-exact` portion.
 
-## Importance
-In order for this to run on other machines cleanly we cannot allow for the machine once you install something to auto update the packages, hence why we need to do this
+## Importance -- Linting
+In order for this to run on other machines cleanly and have same format when reading.  
+I have based everything around the Typescript Style Guild provided by Airbnb
 
-## Before Pushing to remote repo
+[Airbnb Javascript Style Guide](https://github.com/airbnb/javascript?tab=readme-ov-file)
+
+
+## Rules for now before pushing you local branch to the remote repo
 In order to make the `package-lock.json` to function properly you need to run the following command. 
 ```bash
 rm npm-shrinkwrap.json
-npm shrinkwrap
+npm install
+npm run dev
 ```
-shrinkwrap forces the environment to use the exact dependencies that each package needs. Thus making the same issue we have above redundant
-
-### Note for your environment please do the following:
-install npmvet
+Then once everything is to your liking. Do this:
 ```bash
-npm install npmvet -g 
-```
-Then run 
-```bash
+npm install npmvet -g
 npmvet -r inlinetable
 ```
-You should get a table in the `CI`
-#### NOTE
-*If you are getting an error please let me know and I can take a look at it and fix it*
+Your table should look like this in th `CI` :
+
+![alt text](image.png)
+
+### *Note*
+*If you are getting Mismatch then change the dependencies that you have in your package.json with the numbers in the 3<sup>rd</sup> column*
+*If you are getting Unlocked then remove the `^` at the front of every number in your package.json*
+
+Once the table is all green and your updates are done do the following: 
+
+```bash
+npm shrinkwrap
+```
+shrinkwrap forces the environment to use the exact dependencies that each package needs. Thus minimizing JS and TS dependency bugs. 
+
+## Issues
+*If you are getting an error please let me know on discord and I can take a look at it and fix it*
 
 ## Files to Ignore
 * node_modules
 * .dist if your in vs code
 
 # Future Updates
-* Github workflows for AWS
-* Updating UI
-  * *(Look at React Three Fiber and Drei)*
-* Implementing all of the old things I had 
-  * Scribe-ocr.js
-  * In-browser Whisper model `STT`
-  * Look for new `TTS` model to use
-  * distllBIOBERT integration & model training
-  * Any other future UI improvements. 
+* For now everything is blank slate
+* Lets create the chatbot endpoint 
+  * *(For temp we can link is to ChatGPT)*
+*  Things to look at are React-Three-Fiber, or drei
+*  Three.js etc. for graphics on the UI front. 
