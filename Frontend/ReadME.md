@@ -61,6 +61,7 @@ Your table should look like this in th `CI` :
 
 ### *Note*
 *If you are getting Mismatch then change the dependencies that you have in your package.json with the numbers in the 3<sup>rd</sup> column*
+
 *If you are getting Unlocked then remove the `^` at the front of every number in your package.json*
 
 Once the table is all green and your updates are done do the following: 
