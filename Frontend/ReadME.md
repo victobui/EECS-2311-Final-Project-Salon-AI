@@ -35,6 +35,13 @@ I have based everything around the Typescript Style Guild provided by Airbnb
 
 [Airbnb Javascript Style Guide](https://github.com/airbnb/javascript?tab=readme-ov-file)
 
+If you wish to use the linting feature do this 
+
+```bash 
+npm run lint
+npm run lint:fix
+```
+*Don't worry if you get any errors this will take care of them*
 
 ## Rules for now before pushing you local branch to the remote repo
 In order to make the `package-lock.json` to function properly you need to run the following command. 
