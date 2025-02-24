@@ -35,7 +35,7 @@ Welcome to the **Salon AI** GitHub Wiki! This documentation provides an overview
 │  ├── models/          # Business logic & domain models  
 │  ├── services/        # Business logic service layer  
 │  ├── database/        # PostgreSQL database models  
-│  ├── gui/             # Graphical User Interface (React)  
+│  ├── gui/             # Graphical User Interface   
 ├── test/               # Unit tests (JUnit/Pytest)  
 ├── lib/                # External dependencies  
 ├── docs/               # Documentation & architecture sketches  
