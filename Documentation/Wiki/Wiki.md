@@ -29,8 +29,20 @@ Welcome to the **Salon AI** GitHub Wiki! This documentation provides an overview
 ---
 
 ## Repository Structure
-/SalonAI │── src/ # Source code directory │ ├── models/ # Business logic & domain models │ ├── services/ # Business logic service layer │ ├── database/ # Stub database (temporary storage) │ ├── gui/ # Graphical User Interface (GUI) │── test/ # Unit tests (JUnit) │── lib/ # External dependencies │── docs/ # Documentation & architecture sketches │── logs/ # Development logs & meeting notes │── README.md # Project overview │── LICENSE.md # Licensing information │── .gitignore # Ignored files list
 
+/SalonAI  
+├── src/                # Source code directory  
+│  ├── models/          # Business logic & domain models  
+│  ├── services/        # Business logic service layer  
+│  ├── database/        # PostgreSQL database models  
+│  ├── gui/             # Graphical User Interface (React)  
+├── test/               # Unit tests (JUnit/Pytest)  
+├── lib/                # External dependencies  
+├── docs/               # Documentation & architecture sketches  
+├── logs/               # Development logs & meeting notes  
+├── README.md           # Project overview  
+├── LICENSE.md          # Licensing information  
+└── .gitignore          # Ignored files list  
 
 ---
 
