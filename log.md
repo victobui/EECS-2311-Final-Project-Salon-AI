@@ -67,6 +67,26 @@
 
 ---
 
+## Meeting 2
+
+- **Date:** March 1st 2024
+- **Time:** 19:00
+- **Location:** Discord Voice channel
+- **Duration:** 45 min
+- **Participants:**
+
+  | Full Name                    |
+  | ---------------------------- |
+  | Victor Buica                 |
+  | Haadi Memisevic              |
+  | Ainaz Salehi                 |
+  | Uzma Alam                    |
+  | Amit Mehmi                   |
+  | Ali Shandhor                 |
+  | Gurjot Sidhu                 |
+
+---
+
 ## Scope of the Project
 
 | ID  | User Stories                                                                                                                              | Epic (Big User Story)                                | Estimation | Priority   |
