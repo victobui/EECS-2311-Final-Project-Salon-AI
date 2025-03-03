@@ -24,6 +24,7 @@ export default function SignUpPage() {
     console.log('Signup attempt with:', { name, email, password, userType });
     // In a real app, you would call an API endpoint
   };
-  
-  return 0;
-} 
+  return (
+    <div className="min-h-screen flex flex-col"> </div>)
+    
+    }
