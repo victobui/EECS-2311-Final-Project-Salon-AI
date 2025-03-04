@@ -64,7 +64,7 @@ export default function FloatingNav() {
         <div className="absolute -bottom-2 left-0 right-0 h-2 bg-gradient-to-r from-transparent via-[var(--primary)]/20 to-transparent blur-xl rounded-full"></div>
       </div>
       
-       {/* Mobile Navigation */}
+      {/* Mobile Navigation */}
       <div className="fixed top-4 left-0 right-0 z-50 flex md:hidden justify-center">
         <div 
           className="bg-white/90 dark:bg-gray-900/90 backdrop-blur-md rounded-full border border-white/40 dark:border-gray-700/40 shadow-[0_8px_30px_rgb(0,0,0,0.12)] px-3 py-2 flex items-center justify-between"
@@ -100,6 +100,50 @@ export default function FloatingNav() {
           </div>
         </div>
         
-     
+        {/* Mobile Menu */}
+        {isMenuOpen && (
+          <div className="fixed top-16 left-0 right-0 bg-white/95 dark:bg-gray-900/95 backdrop-blur-md shadow-lg rounded-lg mx-4 p-4 border border-gray-200 dark:border-gray-800 z-50">
+            <nav className="flex flex-col space-y-3">
+              <Link 
+                href="/features" 
+                className="text-gray-800 dark:text-gray-100 font-medium px-3 py-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Features
+              </Link>
+              <Link 
+                href="/pricing" 
+                className="text-gray-800 dark:text-gray-100 font-medium px-3 py-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Pricing
+              </Link>
+              <Link 
+                href="/about" 
+                className="text-gray-800 dark:text-gray-100 font-medium px-3 py-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                About
+              </Link>
+              <div className="border-t border-gray-200 dark:border-gray-700 my-1"></div>
+              <Link 
+                href="/login" 
+                className="text-gray-800 dark:text-gray-100 font-medium px-3 py-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Login
+              </Link>
+              <Link 
+                href="/signup" 
+                className="bg-gradient-to-r from-[var(--primary)] to-[var(--secondary)] text-white font-medium px-3 py-2 rounded-md text-center"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Sign Up
+              </Link>
+            </nav>
+          </div>
+        )}
+      </div>
+    </>
   );
 } 
