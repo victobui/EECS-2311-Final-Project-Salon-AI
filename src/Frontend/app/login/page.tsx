@@ -2,8 +2,8 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-//import FloatingNav from '../components/FloatingNav';
-//import Footer from '../components/Footer';
+import FloatingNav from '../components/FloatingNav';
+import Footer from '../components/Footer';
 
 export default function LoginPage() {
   const [email, setEmail] = useState('');
@@ -18,7 +18,7 @@ export default function LoginPage() {
   
   return (
     <div className="min-h-screen flex flex-col">
-      {/* <FloatingNav /> */}
+      <FloatingNav />
       <main className="flex-grow py-16 bg-[var(--gray-bg)]">
         <div className="container-custom">
           <div className="max-w-md mx-auto bg-white p-8 rounded-lg shadow-md">
@@ -91,7 +91,7 @@ export default function LoginPage() {
           </div>
         </div>
       </main>
-      {/*  <Footer /> */}
+      <Footer />
     </div>
   );
 } 
