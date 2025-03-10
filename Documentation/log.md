@@ -47,7 +47,7 @@
 
 ---
 
-## Meeting 1
+## Meeting 3
 
 - **Date:** February 23rd 2025
 - **Time:** 21:00
@@ -67,7 +67,7 @@
 
 ---
 
-## Meeting 2
+## Meeting 4
 
 - **Date:** March 1st 2025
 - **Time:** 19:00
@@ -87,9 +87,13 @@
 
 ---
 
-## Meeting 3
+# Log - Post Itr2
 
-- **Date:** March 9st 2025
+---
+
+## Meeting 5
+
+- **Date:** March 9th 2025
 - **Time:** 20:00
 - **Location:** Discord Voice channel
 - **Duration:** 1 hour
