@@ -4,7 +4,7 @@
 
 ## Meeting 1
 
-- **Date:** February 10th 2024
+- **Date:** February 10th 2025
 - **Time:** 15:00
 - **Location:** Discord Voice channel
 - **Duration:** 1 hour
@@ -25,7 +25,7 @@
 
 ## Meeting 2
 
-- **Date:** February 14th 2024
+- **Date:** February 14th 2025
 - **Time:** 14:00
 - **Location:** Discord Voice channel
 - **Duration:** 45 min
@@ -49,7 +49,7 @@
 
 ## Meeting 1
 
-- **Date:** February 23rd 2024
+- **Date:** February 23rd 2025
 - **Time:** 21:00
 - **Location:** Discord Voice channel
 - **Duration:** 45 min
@@ -69,10 +69,30 @@
 
 ## Meeting 2
 
-- **Date:** March 1st 2024
+- **Date:** March 1st 2025
 - **Time:** 19:00
 - **Location:** Discord Voice channel
 - **Duration:** 45 min
+- **Participants:**
+
+  | Full Name                    |
+  | ---------------------------- |
+  | Victor Buica                 |
+  | Haadi Memisevic              |
+  | Ainaz Salehi                 |
+  | Uzma Alam                    |
+  | Amit Mehmi                   |
+  | Ali Shandhor                 |
+  | Gurjot Sidhu                 |
+
+---
+
+## Meeting 3
+
+- **Date:** March 9st 2025
+- **Time:** 20:00
+- **Location:** Discord Voice channel
+- **Duration:** 1 hour
 - **Participants:**
 
   | Full Name                    |
