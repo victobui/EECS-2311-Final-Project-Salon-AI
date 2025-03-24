@@ -27,7 +27,7 @@ node_modules/
 #Flask
 venv/
 *.pyc
-.env
+# .env
 __pycache__/
 
 # debug
