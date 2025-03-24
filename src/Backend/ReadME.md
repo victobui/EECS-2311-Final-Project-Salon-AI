@@ -41,7 +41,7 @@ Before running the backend, you need to configure your MongoDB Atlas cluster:
 Create a virtual environment using Python:
 
 ```bash
-python -m venv venv
+python3.12 -m venv venv
 ```
 
 Activate the virtual environment in Git Bash:
