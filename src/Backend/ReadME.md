@@ -123,3 +123,13 @@ Backend/
 - Test the complete application workflow by navigating to your endpoints.
 
 For any questions or issues during setup, please open a GitHub issue or contact the team.
+
+###
+Make a .env folder in the Backend and put this in it.
+
+```
+MONGO_USERNAME=VictoBuicaYorku
+MONGO_PASSWORD=adrian
+MONGO_CLUSTER=tempcluster.60vcy.mongodb.net
+JWT_SECRET_KEY=bdfffd9b4f56ad2e05c1090777b140b6e5b18448cff753b933b3d77258d06a0f
+```
