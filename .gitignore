@@ -45,3 +45,10 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# IDE folders
+.idea/
+.vs/
+
+# Project specific
+:latex solution/
