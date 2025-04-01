@@ -4,7 +4,7 @@
 A project by Group 8 (Lassonde School of Engineering, York University)  
 Last updated: February 7, 2025  
 
-▶️ **[Watch the Demo](https://youtu.be/U4ATsBlZStI)**  
+▶️ **[Watch the Demo](https://youtu.be/n8-DVjK4JD0)**  
 
 ---
 
