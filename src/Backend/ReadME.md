@@ -25,6 +25,20 @@ cd EECS-2311-Final-Project-Salon-AI
 cd Backend
 ```
 
+# AUTO SETUP
+
+For autosetup please just use the make file but ensure that no vev is present. 
+for example do the following instructions to setup the core backend. 
+```
+make build
+```
+and then
+```
+make run
+```
+
+If you already have a venv. then continue the following. 
+
 ### 3. Set Up MongoDb
 
 Before running the backend, you need to configure your MongoDB Atlas cluster:
