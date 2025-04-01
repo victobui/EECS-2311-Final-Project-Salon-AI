@@ -2,28 +2,68 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import FloatingNav from '../components/FloatingNav';
-import Footer from '../components/Footer';
+import FloatingNav from '@/app/components/FloatingNav';
+import Footer from '@/app/components/Footer';
+import API from '@/api/axios';
 
 export default function LoginPage() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  
-  const handleSubmit = (e: React.FormEvent) => {
+  const [userType, setUserType] = useState<'client' | 'stylist'>('stylist');
+  const [error, setError] = useState('');
+  const [rememberMe, setRememberMe] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle login logic here
-    console.log('Login attempt with:', email, password);
-    // In a real app, you would call an API endpoint
+    setError('');
+
+    const payload = { email, password, remember: rememberMe };
+    const endpoint = userType === 'stylist' ? '/auth/login/barber' : '/auth/login/user';
+
+    try {
+      const res = await API.post(endpoint, payload, {
+        withCredentials: true,
+      });
+
+      if (res.data && res.data.message === 'Login successful') {
+        const { role, access_token, name } = res.data;
+
+        // Store auth data
+        localStorage.setItem('token', access_token);
+        localStorage.setItem('role', role);
+        localStorage.setItem('name', name || '');
+        
+        // Store token in cookie as well (backup)
+        document.cookie = `token=${access_token}; path=/; samesite=Lax`;
+
+        if (rememberMe) {
+          localStorage.setItem('userType', userType);
+        }
+
+        // Force a hard navigation instead of client-side routing
+        window.location.href = role === 'barber' 
+          ? '/dashboard/barberDash'
+          : '/dashboard/clientDash';
+
+      } else {
+        setError('Invalid login response. Please try again.');
+      }
+    } catch (err: any) {
+      console.error('Login error:', err);
+      setError(err.response?.data?.error || 'Login failed');
+    }
   };
-  
+
   return (
     <div className="min-h-screen flex flex-col">
       <FloatingNav />
-      <main className="flex-grow py-16 bg-[var(--gray-bg)]">
+      <main className="flex-grow pt-24 pb-16 bg-[var(--gray-bg)]">
         <div className="container-custom">
           <div className="max-w-md mx-auto bg-white p-8 rounded-lg shadow-md">
-            <h1 className="text-2xl font-bold text-center mb-6 text-[var(--secondary)]">Login to SalonAI</h1>
-            
+            <h1 className="text-2xl font-bold text-center mb-6 text-[var(--secondary)]">
+              Login to SalonAI
+            </h1>
+
             <form onSubmit={handleSubmit} className="space-y-4">
               <div>
                 <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
@@ -39,7 +79,7 @@ export default function LoginPage() {
                   required
                 />
               </div>
-              
+
               <div>
                 <label htmlFor="password" className="block text-sm font-medium text-gray-700 mb-1">
                   Password
@@ -49,37 +89,53 @@ export default function LoginPage() {
                   type="password"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[var(--primary)] focus:border-transparent"
+                   className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[var(--primary)] focus:border-transparent text-gray-700"
                   placeholder="••••••••"
                   required
                 />
               </div>
-              
+
+              <div>
+                <label htmlFor="user-type" className="block text-sm font-medium text-gray-700 mb-1">
+                  I am a:
+                </label>
+                <select
+                  id="user-type"
+                  value={userType}
+                  onChange={(e) => setUserType(e.target.value as 'stylist' | 'client')}
+                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[var(--primary)] focus:border-transparent text-black"
+                >
+                  <option value="stylist">Hair Stylist</option>
+                  <option value="client">Client</option>
+                </select>
+              </div>
+
               <div className="flex items-center justify-between">
                 <div className="flex items-center">
                   <input
-                    id="remember-me"
-                    type="checkbox"
-                    className="h-4 w-4 text-[var(--primary)] focus:ring-[var(--primary)]"
-                  />
+  id="remember-me"
+  type="checkbox"
+  checked={rememberMe}
+  onChange={(e) => setRememberMe(e.target.checked)}
+  className="h-4 w-4 text-[var(--primary)] focus:ring-[var(--primary)]"
+/>
                   <label htmlFor="remember-me" className="ml-2 block text-sm text-gray-700">
                     Remember me
                   </label>
                 </div>
-                
+
                 <Link href="/forgot-password" className="text-sm text-[var(--primary)] hover:underline">
                   Forgot password?
                 </Link>
               </div>
-              
-              <button
-                type="submit"
-                className="w-full btn-primary py-2 px-4"
-              >
+
+              <button type="submit" className="w-full btn-primary py-2 px-4">
                 Sign In
               </button>
+
+              {error && <p className="text-red-500 text-sm mt-2">{error}</p>}
             </form>
-            
+
             <div className="mt-6 text-center">
               <p className="text-sm text-gray-600">
                 Don&apos;t have an account?{' '}
@@ -94,4 +150,4 @@ export default function LoginPage() {
       <Footer />
     </div>
   );
-} 
+}
