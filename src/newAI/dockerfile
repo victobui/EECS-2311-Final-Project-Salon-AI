@@ -1,0 +1,27 @@
+# Use a lightweight official Python image
+FROM python:3.9-slim
+
+# Install system packages needed for building dlib and cmake
+RUN apt-get update && apt-get install -y \
+    build-essential \
+    cmake \
+    && rm -rf /var/lib/apt/lists/*
+
+# Create a working directory inside the container
+WORKDIR /app
+
+# Copy requirements and install
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Copy your entire project into the working directory
+COPY . .
+
+# Tell Flask to run your app.py by default
+ENV FLASK_APP=app.py
+
+# Expose port 5000 for Flask
+EXPOSE 5001
+
+# Run Flask on container start
+CMD ["flask", "run", "--host=0.0.0.0", "--port=5001"]
