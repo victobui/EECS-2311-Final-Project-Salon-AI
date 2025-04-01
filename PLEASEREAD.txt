@@ -1,0 +1,10 @@
+Hello Due to unforseen circumstances regarding our presentaion we were 
+told by the professor to upload a youtube link of the demo showing the feature that worked 
+in order to recieve 3/5 instead of 1/5 or less. 
+if you have any issue please talk to Prof. Hemmati about Group 12 demo 
+The link is on our main ReadME.md on the repo as well as here bellow:
+https://youtu.be/n8-DVjK4JD0
+
+Also a link to our repo is as follows it is also in the ITR3.pdf that is submitted as well.
+The link is here:
+https://github.com/victobui/EECS-2311-Final-Project-Salon-AI

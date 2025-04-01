@@ -1,4 +1,4 @@
-// File: /Users/haadi/Desktop/EECS-2311-Final-Project-Salon-AI/src/Frontend/app/signup/page.tsx
+// File: E:\Users\owner\Documents\victor\school_work\Other new project\EECS-2311-Final-Project-Salon-AI\src\Frontend\app\signup\page.tsx
 import * as entry from '../../../../app/signup/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

@@ -1,0 +1,19 @@
+\contentsline {section}{\numberline {1}Introduction and Overview}{2}{section.1}%
+\contentsline {section}{\numberline {2}Revised Planning Process}{2}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Updated User Stories and Priorities}{2}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Velocity and Sprint Planning}{2}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Discrepancies from Original Plan}{2}{subsection.2.3}%
+\contentsline {section}{\numberline {3}Implementation, Testing, and Bug Fixing}{2}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Implemented Features}{2}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Testing Approach}{2}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Bug Fixes}{2}{subsection.3.3}%
+\contentsline {section}{\numberline {4}Refactoring and Code Smell Resolutions}{3}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Identified Code Smells / Design Issues}{3}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Refactoring Techniques Applied}{3}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Outstanding Issues}{3}{subsection.4.3}%
+\contentsline {section}{\numberline {5}Documentation Updates}{3}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Wiki / README Changes}{3}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Project Repository}{3}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}Architecture Diagram}{3}{subsection.5.3}%
+\contentsline {section}{\numberline {6}Submission and Evaluation}{3}{section.6}%
+\contentsline {section}{\numberline {7}Conclusion}{4}{section.7}%
