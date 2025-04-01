@@ -26,6 +26,11 @@ First thing you do is download docker if you do not have it yet.
     ```
     and then press the run button
 
+# Images
+For demo purposes please pic an image from the 
+```
+./data/pics/recommendation_pics/
+```
 
 ## Requirements (Only if you really do not want to use the container)
 
